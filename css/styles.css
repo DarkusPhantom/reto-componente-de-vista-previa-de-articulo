@@ -1,297 +1,273 @@
 /*----------Variables---------*/
 :root {
-	--Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
-	--Desaturated-Dark-Blue: hsl(214, 17%, 51%);
-	--Grayish-Blue: hsl(212, 23%, 69%);
-	--Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    --Grayish-Blue: hsl(212, 23%, 69%);
+    --Light-Grayish-Blue: hsl(210, 46%, 95%);
 }
+
 /*fuentes*/
 @font-face {
-		font-family: Manrope;
-		src: url(https://fonts.google.com/specimen/Manrope);
+    font-family: "Manrope";
+    src: local("Manrope-VariableFont_wght.ttf"),
+        url('../fonts/Manrope-VariableFont_wght.ttf');
 }
 
 /*----------General-------*/
 html {
-		box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-		box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 * {
-		color: var(--Very-Dark-Grayish-Blue);
-		margin: 0;
-		padding: 0;
-		text-decoration: none;		
+    color: var(--Very-Dark-Grayish-Blue);
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
 }
 
 body {
-		font-size: 13px;
-		font-family: Manrope, Verdana, 'Comic Sans';
-		background-color: var(--Light-Grayish-Blue);
-		text-align: center;
-		font-weight: 500 700;
+    font-size: 13px;
+    font-family: Manrope, Verdana, 'Comic Sans';
+    background-color: var(--Light-Grayish-Blue);
+    text-align: center;
+    font-weight: 500 700;
 }
 
 /*Opacity*/
 .share:hover,
 .name:hover,
 .attribution a:hover {
-		cursor: pointer;
+    cursor: pointer;
 }
 
 /*----Container-----*/
 .container {
-		width: auto;
-		height: auto;
-		margin: 25vh auto;
-		text-align: center;
+    width: auto;
+    height: auto;
+    max-height: 700px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 /*------Card--------*/
 .card {
-		border-radius: 10px;
-		display: flex;
-		margin: auto;
-		width: 55%;
-}
-
-@media screen and m(max-width: 600px) {
-	.card {
-		
-	}
+    border-radius: 10px;
+    display: flex;
+    margin: 13% auto;
+    width: 55%;
 }
 
 .card-img {
-		width: 20%;
-		float: left;
-		object-fit: contain;
+    width: 35%;
+    float: left;
+    border-radius: 10px 0 0 10px;
 }
 
 .card-img img {
-		width: calc(100% + 175px);
-		height: 100%;
-		border-radius: 10px 0 0 10px;
-}
-
-@media screen and (max-width: 600px) {
-		.container-img {
-				width: 100%;
-		}
+    object-fit: cover;
+    object-position: -15%;
+    border-radius: 10px 0 0 10px;
 }
 
 /*----Content-----*/
 .card-content {
-		background-color: white;
-		border-radius: 0 10px 10px 0;
-		float: left;
-		line-height: 1.5;
-		height: auto;
-		padding: 25px 15px 15px 30px;
-		text-align: initial;
-		margin-left: 15%;
-		width: 63%;
-}
-
-@media screen and (max-width: 600px) {
-		.card-card-content {
-				width: 100%;
-				float: none;
-		}
+    background-color: white;
+    border-radius: 0 10px 10px 0;
+    float: left;
+    line-height: 1.5;
+    height: auto;
+    padding: 25px 15px 15px 30px;
+    text-align: initial;
+    width: 63%;
 }
 
 .card-content-title {
-		font-size: 18px;
-		margin-bottom: 10px;
-		width: 90%;
-}
-
-@media screen and (max-width: 600px) {
-
-		.card-content-title,
-		.card-content-text {
-				margin: 0 auto 20px auto;
-				text-align: center;
-				line-height: 1.6;
-		}
-
-		.card-content-title {
-				font-size: 1.5em;
-				width: 70%;
-		}
-
-		.card-content-text {
-				width: 60% !important;
-		}
+    font-size: 22px;
+    margin-bottom: 10px;
+    width: 90%;
 }
 
 .card-content-text {
-		margin-bottom: 15px;
-		text-align: justify;
-		width: 90%;
+    margin-bottom: 15px;
+    text-align: justify;
+    width: 90%;
 }
 
 /*Profile*/
 .card-content-profile {
-		width: 95%;
-		/*overflow: hidden;*/
+    width: 95%;
+    /*overflow: hidden;*/
 }
 
 .profile {
-		float: left;
-		width: 80%;
+    float: left;
+    width: 80%;
 }
 
 .profile-img {
-		border-radius: 50%;
-		width: 13%;
-		float: left;
+    border-radius: 50%;
+    width: 13%;
+    float: left;
 }
 
 .profile-datos {
-		width: 80%;
-		margin: 0 auto;
-		overflow: hidden;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
 }
 
 .name {
-		display: block;
+    display: block;
 }
 
 .datetime-pubdate {
-		display: block;
-		color: var(--Grayish-Blue:);
-		font-size: 10px;
+    display: block;
+    color: var(--Grayish-Blue:);
+    font-size: 10px;
 }
 
 /*Share*/
 .share {
-		float: right;
-		margin: 5px auto;
-		padding: 5px 8px;
-		background-color: var(--Light-Grayish-Blue);
-		border-radius: 50%;
-		width: 8%;
-}
-
-.share:hover {
-	background-color: var(--Very-Dark-Grayish-Blue);
+    float: right;
+    margin: 5px auto;
+    width: 8%;
 }
 
 /* Tooltip container */
 .tooltip {
-	position: relative;
-	display: inline-block;
-	z-index: 1;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+}
+
+.tooltip .icon-share {
+    padding: 7px;
+    background-color: var(--Light-Grayish-Blue);
+    border-radius: 50%;
+}
+
+.tooltip .icon-share:hover {
+    background-color: var(--Very-Dark-Grayish-Blue);
 }
 
 /* Tooltip text */
 .tooltip .tooltip-content {
-	/*display: none;*/
-	visibility: hidden;
-	width: calc(100% + 200px);
-	background-color: var(--Very-Dark-Grayish-Blue);
-	text-align: center;
-	padding: 10px 0;
-	border-radius: 6px;
-	bottom: calc(100% + 25px);
-	left: -15%;
-	margin-left: calc(100% - 130px);
-	position: absolute;
-	z-index: 2;
-	transition: opacity .6s;
-	height: 50px;
+    /*visibility: hidden;*/
+    width: calc(100% + 200px);
+    background-color: var(--Very-Dark-Grayish-Blue);
+    text-align: center;
+    padding: 10px 0;
+    border-radius: 6px;
+    bottom: calc(100% + 25px);
+    left: -15%;
+    margin-left: calc(100% - 130px);
+    position: absolute;
+    z-index: 2;
+    transition: opacity .6s;
+    height: 50px;
 }
 
 .tooltip:hover .tooltip-content {
-	visibility: visible;
-}
-
-.tooltip .tooltip-text,
-.tooltip .tooltip-icon {
-	
+    visibility: visible;
 }
 
 .tooltip .tooltip-text {
-	color: var(--Grayish-Blue);
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	margin-right: 15px;
+    color: var(--Grayish-Blue);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-right: 15px;
 }
 
 .tooltip .tooltip-icon {
-	margin: 0 5px;
-	
+    margin: 0 5px;
+
 }
-/*
-@media screen and (min-width: 1080px){
-	.content-text{
-	}
-}
-.btn-content {
-	background-color: white;
-	border-radius: 50px;
-	box-shadow: 0 1px 3px black;
-	color: hsl(257, 40%, 49%);
-	font-size: 16px;
-	height: 45px;
-	padding: 13px 60px;
-	text-transform: capitalize;
-	text-decoration: none;
-}
-.btn:hover {
-	background-color: hsl(257, 60%, 60%);
-	box-shadow: none;
-	color: white;
-	border:none;
-}
-@media screen and (max-width: 600px) {
-	.btn-content {
-		padding: 13px 80px;
-		margin: 20px 0 13vh 28%;
-		text-align: center;
-		font-size: 18px;
-	}
-}
-*/
+
 /*----------Footer-----------*/
 .footer-page {
-		width: 100%;
-		overflow: hidden;
-		/*Limpiando floats*/
+    width: 100%;
+    overflow: hidden;
+    /*Limpiando floats*/
 }
 
+/*----------Responsive Design-------------*/
+/*Responsive Celular*/
 @media screen and (max-width: 600px) {
-		.footer-page {
-				margin-bottom: 7vh;
-		}
-}
+    .card {
+        display: block;
+        width: 85%;
+        max-width: 400px;
+        margin: 20px auto;
+    }
 
-.social-networks {
-		width: 20%;
-		float: right;
-}
+    .card-content {
+        border-radius: 0 0 10px 10px;
+        padding: 50px 30px 20px 30px;
+        margin-top: -5px;
+        max-width: inherit;
+        min-height: 360px;
+    }
 
-@media screen and (max-width: 600px) {
-		.social-networks {
-				width: 100%;
-				margin: 10vh 0;
-		}
-}
+    .card-content,
+    .card-img {
+        width: 100%;
+        float: none;
+    }
 
-.social-networks-icons {
-		border: 2px solid white;
-		border-radius: 50%;
-		color: white;
-		margin-right: 10px;
-		padding: 5px 10px;
-		width: 30px;
-}
+    .card-img img {
+        max-height: 250px;
+        object-position: 0 20%;
+        border-radius: 10px 10px 0 0;
+    }
 
-.social-networks-icons:nth-child(3) {
-		margin-right: 0;
+    .card-content-title,
+    .card-content-text {
+        width: 95%;
+        margin-bottom: 20px;
+        line-height: 1.6;
+    }
+
+    .card-content-title {
+        max-width: 335px;
+        font-size: 21px;
+    }
+
+    .card-content-text {
+        max-width: 285px;
+        text-align: left;
+        font-size: 15px;
+    }
+
+    .profile-img {
+        width: 15%;
+    }
+
+    .profile-datos {
+        width: 75%;
+    }
+
+    .tooltip .icon-share {
+        position: absolute;
+        z-index: 3;
+    }
+
+    .tooltip .icon-share:hover {
+        background-color: var(--Desaturated-Dark-Blue);
+    }
+
+    .tooltip .tooltip-content {
+        top: -15px;
+        right: -180%;
+        border-radius: 0 0 10px 10px;
+        height: 60px;
+        width: calc(100% + 373px);
+        margin-left: auto;
+        padding: 15px;
+    }
 }
